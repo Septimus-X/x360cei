@@ -7,7 +7,7 @@ INT Application()
 	DWORD dw = GetCurrentDirectory(0, NULL);
 	LPTSTR cw = (LPTSTR)HeapAlloc( GetProcessHeap(), 0, (dw+1)*sizeof(TCHAR) );
 	dw = GetCurrentDirectory(dw, cw);
-	X360CEFiles files(cw, dw);
+	x360ceFiles files(cw, dw);
 	HeapFree( GetProcessHeap(), 0, cw );
 
 	if( files.exist() ) {

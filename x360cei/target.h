@@ -10,7 +10,7 @@ public:
 	Target();
 	~Target();
 
-	bool link(const X360CEFiles &files);
+	bool link(const x360ceFiles &files);
 	bool request();
 
 private:

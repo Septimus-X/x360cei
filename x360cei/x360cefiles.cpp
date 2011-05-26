@@ -1,9 +1,9 @@
 #include "x360cefiles.h"
 
-const TCHAR X360CEFiles::m_pszDll[] = TEXT("xinput1_3.dll");
-const TCHAR X360CEFiles::m_pszIni[] = TEXT("x360ce.ini");
+const TCHAR x360ceFiles::m_pszDll[] = TEXT("xinput1_3.dll");
+const TCHAR x360ceFiles::m_pszIni[] = TEXT("x360ce.ini");
 
-X360CEFiles::X360CEFiles(LPTSTR pszPath, size_t cchPath)
+x360ceFiles::x360ceFiles(LPTSTR pszPath, size_t cchPath)
 {
 	int i = sizeof(m_pszDll);
 	size_t cbPath = cchPath*sizeof(TCHAR);
@@ -21,12 +21,12 @@ X360CEFiles::X360CEFiles(LPTSTR pszPath, size_t cchPath)
 	StringCbCopy(this->m_pszIniPath+cchPath+1, sizeof(m_pszIni), this->m_pszIni);
 }
 
-X360CEFiles::~X360CEFiles()
+x360ceFiles::~x360ceFiles()
 {
 	HeapFree( GetProcessHeap(), 0, m_pszDllPath );
 }
 
-bool X360CEFiles::exist() const
+bool x360ceFiles::exist() const
 {
 	HANDLE h = NULL;
 

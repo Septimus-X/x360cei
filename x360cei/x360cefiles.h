@@ -1,12 +1,12 @@
-#ifndef X360CEFILES_H
-#define X360CEFILES_H
+#ifndef x360ceFILES_H
+#define x360ceFILES_H
 
 #include "winapi.h"
 
-class X360CEFiles {
+class x360ceFiles {
 public:
-	X360CEFiles(LPTSTR pszPath, size_t cchPath);
-	~X360CEFiles();
+	x360ceFiles(LPTSTR pszPath, size_t cchPath);
+	~x360ceFiles();
 
 	LPCTSTR dllPath() const
 	{ return this->m_pszDllPath; }
@@ -15,9 +15,9 @@ public:
 	{ return this->m_pszIniPath; }
 
 private:
-	X360CEFiles();
-	X360CEFiles(const X360CEFiles &other);
-	X360CEFiles& operator=(const X360CEFiles &other);
+	x360ceFiles();
+	x360ceFiles(const x360ceFiles &other);
+	x360ceFiles& operator=(const x360ceFiles &other);
 
 	static const TCHAR m_pszDll[];
 	static const TCHAR m_pszIni[];
@@ -25,4 +25,4 @@ private:
 	LPTSTR m_pszIniPath;
 };
 
-#endif // X360CEFILES_H
+#endif // x360ceFILES_H

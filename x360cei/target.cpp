@@ -22,7 +22,7 @@ Target::~Target()
 	}
 }
 
-bool Target::link(const X360CEFiles &files)
+bool Target::link(const x360ceFiles &files)
 {
 	BOOLEAN ret = TRUE;
 
