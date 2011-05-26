@@ -16,7 +16,7 @@ INT Application()
 			if( target.link(files) )
 				MessageBox( NULL, TEXT("x360ce links created successfully!"), TEXT("x360ce installer"), MB_OK );
 			else {
-				LPTSTR s;
+				LPTSTR s = NULL;
 				FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM, NULL, GetLastError(), 0, (LPTSTR)&s, 0, NULL);
 				MessageBox( NULL, s, TEXT("x360ce installer ERROR"), MB_OK );
 				LocalFree(s);
